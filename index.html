@@ -1,44 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio de formulario em HTML</title>
 </head>
-<h1>Formulário</h1>
 <body>
-    <div>
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome"/>
-    </div> <br>
-    <div>
-        <label for="idade">Idade:</label>
-        <input type="number" id="idade"/>
-    </div> <br>
-    <div>
-        <label for="email">E-mail:</label>
-        <input type="email" id="email">
-    </div> <br>
-    <div>
-        <label for="genero">Gênero</label>
-        <input type="radio" name="selecao" id="masculino">Masculino
-        <input type="radio" name="selecao" id="feminino">Feminino
-        <input type="radio" name="selecao" id="outros">Outros
- 
-    </div> <br>
+  <h1 style="color: darkslategrey;">Formulário de Informações (Por gentileza preencher)</h1>
+  
+  <form style="color: #4d4949fc;" action="/CAMPINHO/Desafio-HTML/output.html" method="get">   <!-- Para esse exercício não será necessário, mas caso as informações do form fossem enviadas p/ um servidor, essas info deveriam ser acrescentadas no campo de atributos do form: action="[endereço do servidor, sem os colchetes]" method="post". Também o atributo 'name' deveria ser usado para identificar o campo quando os dados do formulário fossem enviados ao servidor. Mas como estamos trabalhando sem um servidor, por enquanto, vou deixar apenas como comentário. -->
+     
+     <!--Note que preciso associar a label com a caixa de input que eu vou chamar no exemplo abaixo de "cx_nome", por isso no atributo for da label e no id do imput eu preciso colocar a mesma coisa e assim será feita uma associação entre eles.  -->
 
-    <div>
-        <label for="comentario">Comentários:</label><br>
-        <textarea style="resize: vertical;"></textarea>
-    </div> <br>
+     <p>
+       <!-- Campo Nome -->
+           <label for="cx_nome">Nome:</label>
+           <input type="text" id="cx_nome" name="cxnome" size="42" required> <!--Required é para tornar obrigatório o preenchimento do campo-->
+     </p>
 
-    
+    <p>
+      <!-- Campo Idade -->
+      <label for="cx_idade">Idade:</label>
+      <input type="number" id="cx_idade" size="5" min="0" required>
+    </p>
 
+    <p>
+      <!-- Campo E-mail -->
+      <label for="cx_email">E-mail:</label>
+      <input type="email" id="cx_email" size="50" required>
+    </p>
 
-    <div>
-        <label for="enviar"></label>
-        <input type="button" value="Enviar">
-    </div>
+    <p>
+      <!-- Campo Sexo -->
+      <label>Sexo:</label>
+      <input type="radio" id="masculino" name="sexo" value="Masculino" required>
+      <label for="masculino">Masculino</label>
+      <input type="radio" id="feminino" name="sexo" value="Feminino" required>
+      <label for="feminino">Feminino</label><br>
+    </p>
 
-    </body>
+    <!-- Botão de Envio -->
+    <input type="submit" value="Enviar">
+  </form>
+
+  <p><a href="/CAMPINHO/Desafio-HTML/output.html">Output do desafio</a></p>
+</body>
 </html>
